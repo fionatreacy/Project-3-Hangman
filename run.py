@@ -25,6 +25,7 @@ def play(word):
     while not guess and attempts > 0:
         """
         Compares players guess against the correct word
+        and returns message if guess is right, wrong, or already guessed
         """
         guess = input("please enter a letter or word: \n").upper()
         if len(guessed) == 1 and guess.isalpha():
@@ -32,6 +33,18 @@ def play(word):
                 print("you've guessed that letter already", guessed)
             elif guessed not in word:
                 print("Sorry,", guessed "is not in the word\n")
+                attempts -= 1
+                letters_guessed.append(guessed)
+            else:
+                print("Congrats, you've guessed a correct letter!")
+                letters_guessed.append(guessed)
+                word_converted_to_list = list(completed_word)
+                indices = [i for i, letter in enumerate(word) if letter == guessed]
+                for index in indices:
+                    word_as_list[index] = guess
+                completed_word = "".join(word_as_list)
+                if "_" not in completed_word:
+                    guess = True
 
 
 def display_hangman(attempts):
