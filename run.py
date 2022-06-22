@@ -28,11 +28,11 @@ def play(word):
         and returns message if guess is right, wrong, or already guessed
         """
         guess = input("please enter a letter or word: \n").upper()
-        if len(guessed) == 1 and guess.isalpha():
+        if len(guessed) == 1 and guessed.isalpha():
             if guessed in letters_guessed:
                 print("you've guessed that letter already", guessed)
             elif guessed not in word:
-                print("Sorry,", guessed "is not in the word\n")
+                print("Sorry,", guessed, "is not in the word \n")
                 attempts -= 1
                 letters_guessed.append(guessed)
             else:
@@ -45,6 +45,13 @@ def play(word):
                 completed_word = "".join(word_as_list)
                 if "_" not in completed_word:
                     guess = True
+        elif len(guessed) == len(word) and guessed.isalpha():
+            if guessed in words_guessed:
+                print("You've guessed that word already", guessed)
+            elif guessed != word:
+                print("Sorry", guessed, "is not the word \n")
+
+
 
 
 def display_hangman(attempts):
