@@ -64,9 +64,6 @@ def play(word):
     else:
         print("Sorry, you've run out of attempts. The word was ", word )
 
-
-
-
 def display_hangman(attempts):
     stages = [  
                 """
@@ -140,3 +137,13 @@ def display_hangman(attempts):
                 """
     ]
     return stages[tries]
+
+def main():
+    word = get_words()
+    play(word)
+    while input("Play Again? (Y/N) ").upper() == "Y":
+        """
+        Allows player to play again
+        """
+        word = get_words()
+        play(word)
