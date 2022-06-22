@@ -1,11 +1,11 @@
 import random
-from words.py import list_of_words
+from words import list_of_words
 
 def get_words():
     """ 
     Generates random word from word.py
     """
-    word = random.word(list_of_words)
+    word = random.choice(list_of_words)
     return word.upper()
 
 def play(word):
@@ -19,7 +19,7 @@ def play(word):
     attempts = 6
     print("Welcome to Hangman!")
     print(display_hangman(attempts))
-    print(completed_word "\n")
+    print(completed_word)
     
     
     while not guess and attempts > 0:
@@ -27,7 +27,7 @@ def play(word):
         Compares players guess against the correct word
         and returns message if guess is right, wrong, or already guessed
         """
-        guess = input("please enter a letter or word: \n").upper()
+        guessed = input("please enter a letter or word: \n").upper()
         if len(guessed) == 1 and guessed.isalpha():
             if guessed in letters_guessed:
                 print("you've guessed that letter already", guessed)
@@ -41,8 +41,8 @@ def play(word):
                 word_converted_to_list = list(completed_word)
                 indices = [i for i, letter in enumerate(word) if letter == guessed]
                 for index in indices:
-                    word_as_list[index] = guess
-                completed_word = "".join(word_as_list)
+                    word_converted_to_list[index] = guessed
+                completed_word = "".join(word_converted_to_list)
                 if "_" not in completed_word:
                     guess = True
         elif len(guessed) == len(word) and guessed.isalpha():
@@ -136,7 +136,7 @@ def display_hangman(attempts):
                    -
                 """
     ]
-    return stages[tries]
+    return stages[attempts]
 
 def main():
     word = get_words()
@@ -147,3 +147,5 @@ def main():
         """
         word = get_words()
         play(word)
+
+main()
