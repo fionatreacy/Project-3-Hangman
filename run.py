@@ -50,6 +50,19 @@ def play(word):
                 print("You've guessed that word already", guessed)
             elif guessed != word:
                 print("Sorry", guessed, "is not the word \n")
+                attempts -= 1
+                words_guessed.append(guessed)
+            else:
+                guess = True
+                completed_word = word
+        else:
+            print("Not a valid guess, try again")
+        print(display_hangman(attempts))
+        print(completed_word)
+    if guessed:
+        print("Congrats, you've guessed the word!")
+    else:
+        print("Sorry, you've run out of attempts. The word was ", word )
 
 
 
