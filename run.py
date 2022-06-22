@@ -27,10 +27,11 @@ def play(word):
         Compares players guess against the correct word
         """
         guess = input("please enter a letter or word: \n").upper()
-        if len(guess) == 1 and guess.isalpha():
-            if guess in letters_guessed:
-                print("you've guessed that letter already", guess)
-            
+        if len(guessed) == 1 and guess.isalpha():
+            if guessed in letters_guessed:
+                print("you've guessed that letter already", guessed)
+            elif guessed not in word:
+                print("Sorry,", guessed "is not in the word\n")
 
 
 def display_hangman(attempts):
