@@ -17,6 +17,20 @@ def play(word):
     letters_guessed = []
     words_guessed = []
     attempts = 6
+    print("Welcome to Hangman!")
+    print(display_hangman(attempts))
+    print(completed_word "\n")
+    
+    
+    while not guess and attempts > 0:
+        """
+        Compares players guess against the correct word
+        """
+        guess = input("please enter a letter or word: \n").upper()
+        if len(guess) == 1 and guess.isalpha():
+            if guess in letters_guessed:
+                print("you've guessed that letter already", guess)
+            
 
 
 def display_hangman(attempts):
