@@ -1,16 +1,19 @@
 import random
 from words import list_of_words
 
+
 def get_words():
-    """ 
+    """
     Generates random word from word.py
     """
     word = random.choice(list_of_words)
     return word.upper()
 
+
 def play(word):
     """
-    Displays game visuals including the hangman, number of attempts, incorrect guesses, and guessed words
+    Displays game visuals including the hangman,
+    number of attempts, incorrect guesses, and guessed words
     """
     completed_word = "_" * len(word)
     guess = False
@@ -20,8 +23,8 @@ def play(word):
     print("Welcome to Hangman!")
     print(display_hangman(attempts))
     print(completed_word)
-    
-    
+
+
     while not guess and attempts > 0:
         """
         Compares players guess against the correct word
@@ -62,10 +65,11 @@ def play(word):
     if guessed:
         print("Congrats, you've guessed the word!")
     else:
-        print("Sorry, you've run out of attempts. The word was ", word )
+        print("Sorry, you've run out of attempts. The word was ", word)
+
 
 def display_hangman(attempts):
-    stages = [  
+    stages = [
                 """
                    --------
                    |      |
@@ -75,68 +79,69 @@ def display_hangman(attempts):
                    |     / \\
                    -
                 """,
-                
+
                 """
                    --------
                    |      |
                    |      O
                    |     \\|/
                    |      |
-                   |     / 
+                   |     /
                    -
                 """,
-                
+
                 """
                    --------
                    |      |
                    |      O
                    |     \\|/
                    |      |
-                   |      
+                   |
                    -
                 """,
-                
+
                 """
                    --------
                    |      |
                    |      O
                    |     \\|
                    |      |
-                   |     
+                   |
                    -
                 """,
-                
+
                 """
                    --------
                    |      |
                    |      O
                    |      |
                    |      |
-                   |     
+                   |
                    -
                 """,
-                
+
                 """
                    --------
                    |      |
                    |      O
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
                    -
                 """,
-                
+
                 """
                    --------
                    |      |
-                   |      
-                   |    
-                   |      
-                   |     
+                   |
+                   |
+                   |
+                   |
                    -
                 """
     ]
     return stages[attempts]
+
 
 def main():
     word = get_words()
@@ -147,5 +152,6 @@ def main():
         """
         word = get_words()
         play(word)
+
 
 main()
