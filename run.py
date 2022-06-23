@@ -30,10 +30,10 @@ def play(word):
         Compares players guess against the correct word
         and returns message if guess is right, wrong, or already guessed
         """
-        guessed = input("please enter a letter or word: \n").upper()
+        guessed = input("Please enter a letter or word: \n").upper()
         if len(guessed) == 1 and guessed.isalpha():
             if guessed in letters_guessed:
-                print("you've guessed that letter already", guessed)
+                print("You've guessed that letter already", guessed)
             elif guessed not in word:
                 print("Sorry,", guessed, "is not in the word \n")
                 attempts -= 1
