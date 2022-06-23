@@ -11,4 +11,7 @@ list_of_words = [
     'dried',
     'swoon',
     'early',
+    'phone',
+    'brave',
+    'water'
 ]
