@@ -69,6 +69,9 @@ def play(word):
 
 
 def display_hangman(attempts):
+    """
+    Prints the updated hangman after each attempt
+    """
     stages = [
                 """
                    --------
