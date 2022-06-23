@@ -62,7 +62,7 @@ def play(word):
             print("Not a valid guess, try again")
         print(display_hangman(attempts))
         print(completed_word)
-    if guessed:
+    if guess:
         print("Congrats, you've guessed the word!")
     else:
         print("Sorry, you've run out of attempts. The word was ", word)
