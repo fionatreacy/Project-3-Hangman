@@ -29,7 +29,12 @@ def play(word):
     \_| |_/\_| |_/\_| \_/\____/\_|  |_/\_| |_/\_| \_/                                      
                                               
     """)
+    """
+    Logo for the game. Generated with: patorjk.com
+    """
     print("Welcome to Hangman!")
+    print("You have six attempts to guess a five letter word.")
+    print("Guess a letter or word to save the Hangman")
     print(display_hangman(attempts))
     print(completed_word)
 
