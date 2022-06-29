@@ -20,14 +20,13 @@ def play(word):
     letters_guessed = []
     words_guessed = []
     attempts = 6
-    print( """
-     _   _   ___   _   _ _____ ___  ___  ___   _   _ 
+    print("""
+     _   _   ___   _   _ _____ ___  ___  ___   _   _
     | | | | / _ \ | \ | |  __ \|  \/  | / _ \ | \ | |
     | |_| |/ /_\ \|  \| | |  \/| .  . |/ /_\ \|  \| |
     |  _  ||  _  || . ` | | __ | |\/| ||  _  || . ` |
     | | | || | | || |\  | |_\ \| |  | || | | || |\  |
-    \_| |_/\_| |_/\_| \_/\____/\_|  |_/\_| |_/\_| \_/                                      
-                                              
+    \_| |_/\_| |_/\_| \_/\____/\_|  |_/\_| |_/\_| \_/
     """)
     """
     Logo for the game. Generated with: patorjk.com
@@ -37,7 +36,6 @@ def play(word):
     print("Guess a letter or word to save the Hangman")
     print(display_hangman(attempts))
     print(completed_word)
-
 
     while not guess and attempts > 0:
         """
