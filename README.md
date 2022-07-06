@@ -1,31 +1,93 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Portfolio 3: Hangman
 
-Welcome fionatreacy,
+This interactive game of Hangman is a simple CLI game which runs on the Code Institute mock terminal on Heroku. Players must guess letters or words until they either are correct and win, or run out of attempts and the hangman gets executed.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+<a href="https://portfolio-3-hangman.herokuapp.com/" target="_blank" rel="noopener">Here is the live version of my project</a>
 
-## Reminders
+----
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How to Play
 
-## Creating the Heroku app
+Hangman is a classic pen and paper game
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+Originally played with 2 or more players where one thinks of a word and the others guess, this version can be played solo as the computer randomly generates a word
 
-1. `heroku/python`
-2. `heroku/nodejs`
+The player can guess a letter or a 5-letter word
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+If they are correct, they are shown where the guessed letter fits in the word. If they are wrong, the lose an attempt and the hangman figure updates to show he is closer to execution
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+If they guess the correct word they are congratulated on their win and asked if they would like to play again
 
-Connect your GitHub repository and deploy as normal.
+If they run out of attempts, they are told what the word is and asked if they would like to play again
 
-## Constraints
+----
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Features
+
+* Intro
+
+When loaded the game welcomes the user and explains the game
+
+![game intro](/images/hangman-intro.png)
+
+* Input validation and error checking
+
+Player can't enter invalid guesses such as letters or words that aren't 5 letters, and can't guess the same letter twice
+
+![invalid guess](/images/invalid-guess.png)
+
+* End of game
+
+When the game concludes it congratulates the player on their win, or displays the executed hangman along with the correct word. In both instances it asks the player if they'd like to play again
+
+![end of game](/images/game-conclusion.png)
+
+## Future Features
+
+* Add graphics to game
+* Options to chose easy, medium or hard mode, with different length words and different amounts of attempts
+
+----
+
+## Flowchart
+
+![flowchart](/images/flowchart.png)
+
+----
+
+## Testing
+
+I've manually tested my project by doing the following:
+
+* Passing it through the PEP8 linter, which found no significant problems except one line being 4 characters too long
+* Entered invalid inputs
+* Tested in both the Code Institute Heroku terminal and my own GitHub terminal on multiple laptops and computers
+
+## Bugs
+
+* When I originally passed my code through the PEP8 linter is found multiple lines that were too long or contained whitespace, which I fixed and removed
+* When players lost the game would tell them that they won, I fixed this by finding a bug in my if, else conditions
+
+## Remaining Bugs
+
+* No remaining bugs, one line is too long but doesn't negatively affect gameplay. Any attmepts to shorten the line have negatively impacted both the surrounding code and gameplay
 
 -----
-Happy coding!
+
+## Deployment
+
+This project was deployed using Code Institutes mock terminal on Heroku. The steps for deployment are as follows:
+
+* Clone or fork this repository
+* Create a new Heroku app
+* Add necessary config vars, in my case PORT 8000
+* Add buildpacks Python and NodeJS, in that order
+* Link the Heroku app to the correct repository
+* Click DEPLOY
+
+----
+
+## Credits
+
+* Code Institute for the deployment terminal
+* I referred to tutorials by Kite ("How to Build Hangman with Python") and Tech with Tim ("5 Mini Python Games for Beginners") and CS Students ("Python Basic Project"). I got the code for my hangman figure in my display_hangman function from Kite's tutorial.
