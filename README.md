@@ -90,4 +90,4 @@ This project was deployed using Code Institutes mock terminal on Heroku. The ste
 ## Credits
 
 * Code Institute for the deployment terminal
-* I referred to tutorials by Kite ("How to Build Hangman with Python in 10 Minutes") and Tech with Tim ("5 Mini Python Games for Beginners") and CS Students ("How to Build a Hangman Game with Python"). I got the code for my hangman figure in my display_hangman function from Kite's tutorial.
+* I referred to tutorials by Kite ("How to Build Hangman with Python in 10 Minutes") and Tech with Tim ("5 Mini Python Games for Beginners") and CS Students ("How to Build a Hangman Game with Python"). I got the code for my hangman figure in my display_hangman function from Kite's tutorial
