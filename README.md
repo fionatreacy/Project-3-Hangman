@@ -32,7 +32,7 @@ When loaded the game welcomes the user and explains the game
 
 * Input validation and error checking
 
-Player can't enter invalid guesses such as letters or words that aren't 5 letters, and can't guess the same letter twice
+Player can't enter invalid guesses such as numbers or words that aren't 5 letters, and can't guess the same letter twice
 
 ![invalid guess](/images/invalid-guess.png)
 
