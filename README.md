@@ -14,7 +14,7 @@ Originally played with 2 or more players where one thinks of a word and the othe
 
 The player can guess a letter or a 5-letter word
 
-If they are correct, they are shown where the guessed letter fits in the word. If they are wrong, the lose an attempt and the hangman figure updates to show he is closer to execution
+If they guess a correct letter, they are shown where the guessed letter fits in the word. If they are wrong, the lose an attempt and the hangman figure updates to show he is closer to execution
 
 If they guess the correct word they are congratulated on their win and asked if they would like to play again
 
